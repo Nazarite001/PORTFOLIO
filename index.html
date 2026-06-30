@@ -1,104 +1,758 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nazarite Tech Services | Computer Studies Tutor & Full-Stack Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Samuel Onatunde — Executive Assistant &amp; ICT Specialist &amp; Full Stack Developer</title>
+    <meta name="description" content="Samuel Onatunde — Executive Assistant, Administrative Professional, ICT Specialist. Portfolio of administrative excellence and digital projects.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#1E3A8A',
+                            deep: '#142A63',
+                            ink: '#0E1E4A'
+                        },
+                        gold: {
+                            DEFAULT: '#C9A24B',
+                            light: '#E4C77A',
+                            dim: '#8A7234'
+                        },
+                        paper: '#FAFAF8',
+                        mist: '#F1F2F5',
+                    },
+                    fontFamily: {
+                        display: ['Fraunces', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+         ::selection {
+            background: #C9A24B;
+            color: #0E1E4A;
+        }
+        /* Ledger hairline signature element */
+        
+        .ledger-rule {
+            position: relative;
+        }
+        
+        .ledger-rule::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #C9A24B 15%, #C9A24B 85%, transparent);
+            opacity: 0.5;
+        }
+        
+        .tab-marker {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+        }
+        
+        .corner-fold {
+            position: relative;
+        }
+        
+        .corner-fold::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 22px 22px 0;
+            border-color: transparent #C9A24B transparent transparent;
+            opacity: 0.85;
+        }
+        
+        .stamp-ring {
+            border: 1px dashed rgba(201, 162, 75, 0.5);
+        }
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: #F1F2F5;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #1E3A8A;
+            border-radius: 6px;
+        }
+        
+        html.dark ::-webkit-scrollbar-track {
+            background: #0E1E4A;
+        }
+        
+        html.dark ::-webkit-scrollbar-thumb {
+            background: #C9A24B;
+        }
+        
+        .skill-row {
+            transition: padding-left 0.25s ease, color 0.25s ease;
+        }
+        
+        .skill-row:hover {
+            padding-left: 10px;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 1px;
+            background: #C9A24B;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .stat-num {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .card-hover {
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px -18px rgba(14, 30, 74, 0.25);
+        }
+        
+        .timeline-dot {
+            box-shadow: 0 0 0 4px rgba(201, 162, 75, 0.18);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.001ms !important;
+                transition-duration: 0.001ms !important;
+            }
+        }
+    </style>
 </head>
-<body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">Nazarite Tech</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">☰</div>
-        </nav>
+
+<body class="bg-paper dark:bg-navy-ink text-navy-ink dark:text-paper antialiased transition-colors duration-300">
+
+    <!-- ============ NAV ============ -->
+    <header id="top" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-paper/85 dark:bg-navy-ink/85 border-b border-navy/10 dark:border-gold/10">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
+            <a href="#top" class="font-display text-lg font-semibold tracking-tight text-navy dark:text-paper">
+                S. Onatunde <span class="text-gold">.</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-navy/80 dark:text-paper/80">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="Onatunde Samuel CV updated1nw.docx" download class="nav-link text-gold">CV</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="w-9 h-9 grid place-items-center rounded-full border border-navy/15 dark:border-gold/30 text-navy dark:text-gold hover:border-gold transition">
+                    <i class="fa-solid fa-moon text-xs" id="theme-icon"></i>
+                </button>
+                <a href="Onatunde Samuel CV updated1nw.docx" download class="hidden sm:inline-flex items-center gap-2 bg-navy dark:bg-gold text-paper dark:text-navy-ink text-sm font-semibold px-5 py-2.5 rounded-sm hover:bg-navy-deep dark:hover:bg-gold-light transition">
+                    <i class="fa-solid fa-download"></i> CV
+                </a>
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-navy dark:bg-gold text-paper dark:text-navy-ink text-sm font-semibold px-5 py-2.5 rounded-sm hover:bg-navy-deep dark:hover:bg-gold-light transition">
+                    Hire Me
+                </a>
+                <button id="menu-toggle" class="md:hidden w-9 h-9 grid place-items-center text-navy dark:text-paper">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-navy/10 dark:border-gold/10 bg-paper dark:bg-navy-ink px-6 py-4 space-y-3 text-sm font-medium">
+            <a href="#about" class="block">About</a>
+            <a href="#experience" class="block">Experience</a>
+            <a href="#skills" class="block">Skills</a>
+            <a href="#portfolio" class="block">Portfolio</a>
+            <a href="#projects" class="block">Projects</a>
+            <a href="#contact" class="block">Contact</a>
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Onatunde Samuel O.S</h1> <!-- Replace with your name -->
-            <h2 class="hero-subtitle">ICT Tutor & Full-Stack Developer</h2>
-            <p class="hero-bio">
-                Passionate educator and developer specializing in computer studies tutoring and building scalable web apps. 
-                Through Nazarite Tech Services, I empower students with tech skills and create innovative solutions for everyday challenges.
+    <!-- ============ HERO ============ -->
+    <section class="relative pt-32 pb-24 lg:pt-44 lg:pb-32 overflow-hidden">
+        <!-- background ledger lines -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.05] dark:opacity-[0.08]" style="background-image: repeating-linear-gradient(0deg, #1E3A8A 0px, #1E3A8A 1px, transparent 1px, transparent 48px); ">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-16 items-center relative">
+            <div data-aos="fade-up">
+                <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-5 flex items-center gap-3">
+                    <span class="w-8 h-px bg-gold-dim dark:bg-gold"></span> Portfolio — File 01
+                </p>
+                <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-medium leading-[1.03] text-navy dark:text-paper">
+                    Samuel<br>Onatunde
+                </h1>
+                <p class="mt-6 text-lg sm:text-xl font-medium text-navy/80 dark:text-paper/80">
+                    Executive Assistant <span class="text-gold mx-1">·</span> Administrative Professional <span class="text-gold mx-1">·</span> ICT Specialist <span class="text-gold mx-1">·</span> Full Stack Developer
+                </p>
+                <p class="mt-5 max-w-lg text-navy/60 dark:text-paper/60 leading-relaxed">
+                    Helping executives and organizations stay organized, productive, and digitally efficient — one well-run calendar, clean record, and working system at a time.
+                </p>
+
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="Onatunde Samuel CV updated1nw.docx" download class="hidden sm:inline-flex items-center gap-2 bg-navy dark:bg-gold text-paper dark:text-navy-ink text-sm font-semibold px-5 py-2.5 rounded-sm hover:bg-navy-deep dark:hover:bg-gold-light transition">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
+                    <a href="#portfolio" class="inline-flex items-center gap-2 border border-navy/25 dark:border-gold/40 text-navy dark:text-paper font-semibold px-7 py-3.5 rounded-sm hover:border-gold transition">
+                        View Portfolio <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+
+                <div class="mt-12 flex items-center gap-6 text-navy/40 dark:text-paper/40">
+                    <a href="https://linkedin.com/in/samuel-onatunde-b55666224/" class="hover:text-gold transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="https://github.com/nazarite01" class="hover:text-gold transition"><i class="fa-brands fa-github text-xl"></i></a>
+                    <a href="https://wa.me/07044002129" class="hover:text-gold transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+                    <a href="mailto:samuelonatunde@gmail.com" class="hover:text-gold transition"><i class="fa-solid fa-envelope text-xl"></i></a>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" data-aos-delay="150" class="relative justify-self-center">
+                <div class="absolute -inset-4 border border-gold/30 rounded-sm"></div>
+                <div class="corner-fold w-72 sm:w-80 aspect-[4/5] bg-mist dark:bg-navy-deep rounded-sm overflow-hidden relative shadow-2xl">
+                    <img src="my pic3.png" alt="Samuel Onatunde — professional headshot" class="w-full h-full object-cover">
+                </div>
+                <div class="stamp-ring absolute -bottom-6 -left-6 w-28 h-28 rounded-full grid place-items-center bg-paper dark:bg-navy-ink text-center p-3">
+                    <span class="font-display text-xs leading-tight text-navy dark:text-gold">6+
+                        Yrs<br>Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="border-y border-navy/10 dark:border-gold/10 bg-mist/60 dark:bg-navy-deep/40">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+            <div data-aos="fade-up">
+                <p class="stat-num font-display text-4xl lg:text-5xl text-navy dark:text-gold font-semibold" data-count="6" data-suffix="+">0</p>
+                <p class="mt-2 tab-marker uppercase text-navy/50 dark:text-paper/50">Years Experience</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100">
+                <p class="stat-num font-display text-4xl lg:text-5xl text-navy dark:text-gold font-semibold" data-count="4" data-suffix="">0</p>
+                <p class="mt-2 tab-marker uppercase text-navy/50 dark:text-paper/50">Organizations</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="stat-num font-display text-4xl lg:text-5xl text-navy dark:text-gold font-semibold" data-count="20" data-suffix="+">0</p>
+                <p class="mt-2 tab-marker uppercase text-navy/50 dark:text-paper/50">Digital Projects</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <p class="stat-num font-display text-4xl lg:text-5xl text-navy dark:text-gold font-semibold" data-count="100" data-suffix="%">0</p>
+                <p class="mt-2 tab-marker uppercase text-navy/50 dark:text-paper/50">Committed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="py-24 lg:py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-[0.4fr_0.6fr] gap-14">
+            <div data-aos="fade-up">
+                <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-3">File 02 — About</p>
+                <h2 class="font-display text-4xl text-navy dark:text-paper font-medium">The person behind the operations.
+                </h2>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="space-y-5 text-navy/70 dark:text-paper/70 leading-relaxed text-lg ledger-rule pt-6">
+                <p>I am a highly organized administrative professional with over six years of experience supporting school leadership, coordinating administrative operations, managing records, and implementing technology-driven solutions that improve organizational
+                    efficiency.
+                </p>
+                <p>My background combines executive support, office administration, customer service, project coordination, and ICT expertise. I enjoy streamlining workflows, solving problems, and ensuring that daily operations run smoothly with digital
+                    solutions deployment. Skilled in full-stack web development (Node.js, JavaScript, HTML, CSS, MongoDB), UI/UX design, and educational technology systems..</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="py-24 lg:py-32 bg-mist/50 dark:bg-navy-deep/30 border-y border-navy/10 dark:border-gold/10">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div data-aos="fade-up" class="mb-14 text-center">
+                <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-3">File 03 — Skills</p>
+                <h2 class="font-display text-4xl text-navy dark:text-paper font-medium">What I bring to the desk.</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Executive Support -->
+                <div data-aos="fade-up" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-8">
+                    <div class="w-11 h-11 rounded-sm bg-navy dark:bg-gold grid place-items-center mb-6">
+                        <i class="fa-solid fa-briefcase text-paper dark:text-navy-ink"></i>
+                    </div>
+                    <h3 class="font-display text-xl text-navy dark:text-paper mb-5">Executive Support</h3>
+                    <ul class="space-y-2.5 text-sm text-navy/70 dark:text-paper/70">
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Calendar Management</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Meeting Coordination</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Travel Planning</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Email Management</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Document Preparation</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Record Keeping</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Scheduling</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Data Entry</li>
+                    </ul>
+                </div>
+
+                <!-- Office Tools -->
+                <div data-aos="fade-up" data-aos-delay="100" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-8">
+                    <div class="w-11 h-11 rounded-sm bg-navy dark:bg-gold grid place-items-center mb-6">
+                        <i class="fa-solid fa-table-cells text-paper dark:text-navy-ink"></i>
+                    </div>
+                    <h3 class="font-display text-xl text-navy dark:text-paper mb-5">Office Tools</h3>
+                    <ul class="space-y-2.5 text-sm text-navy/70 dark:text-paper/70">
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Microsoft Word</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Excel</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>PowerPoint</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Google Workspace</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Canva</li>
+                    </ul>
+                </div>
+
+                <!-- Technology -->
+                <div data-aos="fade-up" data-aos-delay="200" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-8">
+                    <div class="w-11 h-11 rounded-sm bg-navy dark:bg-gold grid place-items-center mb-6">
+                        <i class="fa-solid fa-code text-paper dark:text-navy-ink"></i>
+                    </div>
+                    <h3 class="font-display text-xl text-navy dark:text-paper mb-5">Technology</h3>
+                    <ul class="space-y-2.5 text-sm text-navy/70 dark:text-paper/70">
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>HTML</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>CSS</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>JavaScript</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Node.js</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>MongoDB</li>
+                        <li class="skill-row"><i class="fa-solid fa-check text-gold mr-2"></i>Figma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE TIMELINE ============ -->
+    <section id="experience" class="py-24 lg:py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div data-aos="fade-up" class="mb-16 text-center">
+                <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-3">File 04 — Experience</p>
+                <h2 class="font-display text-4xl text-navy dark:text-paper font-medium">The record, in order.</h2>
+            </div>
+
+            <div class="relative max-w-3xl mx-auto">
+                <div class="absolute left-[7px] top-2 bottom-2 w-px bg-navy/15 dark:bg-gold/20"></div>
+
+                <!-- Entry 1 -->
+                <div data-aos="fade-up" class="relative pl-12 pb-14">
+                    <span class="timeline-dot absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full bg-gold"></span>
+                    <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-1">2024 — Present</p>
+                    <h3 class="font-display text-2xl text-navy dark:text-paper">ICT Instructor</h3>
+                    <p class="text-navy/50 dark:text-paper/50 text-sm mb-4">Honey Land College</p>
+                    <ul class="space-y-2 text-navy/70 dark:text-paper/70 text-sm">
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Managed digital learning resources.</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Maintained academic records.
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Supported administrative processes.</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Coordinated ICT activities.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Entry 2 -->
+                <div data-aos="fade-up" class="relative pl-12 pb-14">
+                    <span class="timeline-dot absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full bg-navy dark:bg-paper"></span>
+                    <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-1">2018 — 2024</p>
+                    <h3 class="font-display text-2xl text-navy dark:text-paper">Administrative Officer / ICT Instructor
+                    </h3>
+                    <p class="text-navy/50 dark:text-paper/50 text-sm mb-4">Tender Heart &amp; Tender Years School</p>
+                    <ul class="space-y-2 text-navy/70 dark:text-paper/70 text-sm">
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Managed administrative records.</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Coordinated examinations.
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Prepared reports.
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Supported school management.
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Managed communication.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Entry 3 -->
+                <div data-aos="fade-up" class="relative pl-12">
+                    <span class="timeline-dot absolute left-0 top-1.5 w-3.5 h-3.5 rounded-full bg-navy dark:bg-paper"></span>
+                    <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-1">2017 — 2018</p>
+                    <h3 class="font-display text-2xl text-navy dark:text-paper">Computer Operator</h3>
+                    <p class="text-navy/50 dark:text-paper/50 text-sm mb-4">Shobonet Communications</p>
+                    <ul class="space-y-2 text-navy/70 dark:text-paper/70 text-sm">
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Customer support.
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Documentation.</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Record keeping.
+                        </li>
+                        <li class="flex gap-2"><i class="fa-solid fa-angle-right text-gold mt-1"></i>Website support.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PORTFOLIO (Achievements) ============ -->
+    <section id="portfolio" class="py-24 lg:py-32 bg-mist/50 dark:bg-navy-deep/30 border-y border-navy/10 dark:border-gold/10">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div data-aos="fade-up" class="mb-14 text-center">
+                <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-3">File 05 — Portfolio</p>
+                <h2 class="font-display text-4xl text-navy dark:text-paper font-medium">Achievements, not code.</h2>
+                <p class="mt-3 text-navy/55 dark:text-paper/55 max-w-xl mx-auto">A look at the operational and administrative work behind the scenes.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div data-aos="fade-up" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-7">
+                    <i class="fa-solid fa-folder-open text-gold text-2xl mb-5"></i>
+                    <h3 class="font-display text-lg text-navy dark:text-paper mb-3">Office Administration</h3>
+                    <ul class="text-sm text-navy/65 dark:text-paper/65 space-y-1.5">
+                        <li>Record Management</li>
+                        <li>Documentation</li>
+                        <li>Filing Systems</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="80" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-7">
+                    <i class="fa-solid fa-file-excel text-gold text-2xl mb-5"></i>
+                    <h3 class="font-display text-lg text-navy dark:text-paper mb-3">Microsoft Excel</h3>
+                    <ul class="text-sm text-navy/65 dark:text-paper/65 space-y-1.5">
+                        <li>Pivot Tables</li>
+                        <li>Charts</li>
+                        <li>Formulas</li>
+                        <li>Data Validation</li>
+                    </ul>
+                    <p class="mt-4 text-xs text-navy/35 dark:text-paper/35 italic">Screenshots coming soon</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="160" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-7">
+                    <i class="fa-solid fa-chart-line text-gold text-2xl mb-5"></i>
+                    <h3 class="font-display text-lg text-navy dark:text-paper mb-3">Reports</h3>
+                    <ul class="text-sm text-navy/65 dark:text-paper/65 space-y-1.5">
+                        <li>Weekly Reports</li>
+                        <li>Attendance Reports</li>
+                        <li>Budget Sheets</li>
+                    </ul>
+                    <p class="mt-4 text-xs text-navy/35 dark:text-paper/35 italic">Screenshots coming soon</p>
+                </div>
+
+                <div data-aos="fade-up" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-7">
+                    <i class="fa-solid fa-display text-gold text-2xl mb-5"></i>
+                    <h3 class="font-display text-lg text-navy dark:text-paper mb-3">PowerPoint</h3>
+                    <p class="text-sm text-navy/65 dark:text-paper/65">Presentation samples available on request.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="80" class="card-hover bg-paper dark:bg-navy-ink border border-navy/10 dark:border-gold/10 rounded-sm p-7">
+                    <i class="fa-solid fa-palette text-gold text-2xl mb-5"></i>
+                    <h3 class="font-display text-lg text-navy dark:text-paper mb-3">Graphic Design</h3>
+                    <ul class="text-sm text-navy/65 dark:text-paper/65 space-y-1.5">
+                        <li>Flyers</li>
+                        <li>Social Media Designs</li>
+                    </ul>
+                    <p class="mt-4 text-xs text-navy/35 dark:text-paper/35 italic">Certificates coming soon</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="160" class="card-hover bg-navy dark:bg-gold rounded-sm p-7 flex flex-col justify-center items-start text-paper dark:text-navy-ink">
+                    <i class="fa-solid fa-star text-2xl mb-5 text-gold dark:text-navy"></i>
+                    <h3 class="font-display text-lg mb-2">More on request</h3>
+                    <p class="text-sm opacity-80">Full document samples available during interview.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="py-24 lg:py-32">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10">
+            <div data-aos="fade-up" class="mb-14 text-center">
+                <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-3">File 06 — Digital Projects</p>
+                <h2 class="font-display text-4xl text-navy dark:text-paper font-medium">PROJECTS SO FAR.</h2>
+            </div>
+
+            <!-- Featured -->
+            <div data-aos="fade-up" class="grid lg:grid-cols-2 gap-0 mb-8 border border-navy/10 dark:border-gold/10 rounded-sm overflow-hidden card-hover">
+                <div class="aspect-video lg:aspect-auto bg-navy dark:bg-navy-deep">
+                    <img src="educational.JPG" alt="Educational Management System screenshot" class="w-full h-full object-cover">
+                </div>
+                <div class="p-9 lg:p-12 bg-paper dark:bg-navy-ink flex flex-col justify-center">
+                    <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-3">Flagship Build</p>
+                    <h3 class="font-display text-2xl text-navy dark:text-paper mb-4">Educational Management System</h3>
+                    <p class="text-navy/65 dark:text-paper/65 text-sm leading-relaxed mb-5">A full school operations platform handling student records, results, attendance, and staff administration — built to replace manual paper-based processes.</p>
+                    <ul class="flex flex-wrap gap-2 mb-7">
+                        <li class="text-xs font-mono px-3 py-1 border border-navy/15 dark:border-gold/25 rounded-full text-navy/60 dark:text-paper/60">
+                            Node.js</li>
+                        <li class="text-xs font-mono px-3 py-1 border border-navy/15 dark:border-gold/25 rounded-full text-navy/60 dark:text-paper/60">
+                            MongoDB</li>
+                        <li class="text-xs font-mono px-3 py-1 border border-navy/15 dark:border-gold/25 rounded-full text-navy/60 dark:text-paper/60">
+                            Tailwind CSS</li>
+                    </ul>
+                    <a href="https://cbt-exam-sure-guide.onrender.com/" class="inline-flex items-center gap-2 text-navy dark:text-gold font-semibold text-sm w-fit border-b border-gold pb-0.5">
+                        View Project <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Grid of 3 -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div data-aos="fade-up" class="card-hover border border-navy/10 dark:border-gold/10 rounded-sm overflow-hidden">
+                    <img src="queen spring school.JPG" alt="School Website screenshot" class="w-full aspect-video object-cover">
+                    <div class="p-6">
+                        <h3 class="font-display text-lg text-navy dark:text-paper mb-2">School Website</h3>
+                        <p class="text-sm text-navy/60 dark:text-paper/60 mb-4">A responsive public-facing site for admissions, announcements, and staff directories.</p>
+                        <a href="https://www.queensspringschool.com.ng/" class="text-navy dark:text-gold text-sm font-semibold border-b border-gold pb-0.5">Visit
+                            Website</a>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="card-hover border border-navy/10 dark:border-gold/10 rounded-sm overflow-hidden">
+                    <img src="common entrance app.JPG" alt="Result Management System screenshot" class="w-full aspect-video object-cover">
+                    <div class="p-6">
+                        <h3 class="font-display text-lg text-navy dark:text-paper mb-2">Result Management System</h3>
+                        <p class="text-sm text-navy/60 dark:text-paper/60 mb-4">Automated grade computation, report-card generation, and result archiving.</p>
+                        <a href="https://common-entrance-app.onrender.com" class="text-navy dark:text-gold text-sm font-semibold border-b border-gold pb-0.5">Visit Website
+                        </a>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="card-hover border border-navy/10 dark:border-gold/10 rounded-sm overflow-hidden">
+                    <img src="educational.JPG" alt="Quiz System screenshot" class="w-full aspect-video object-cover">
+                    <div class="p-6">
+                        <h3 class="font-display text-lg text-navy dark:text-paper mb-2">Quiz System</h3>
+                        <p class="text-sm text-navy/60 dark:text-paper/60 mb-4">A timed online assessment tool with (TRCN EXAM PRACTICE APP) for teachers.</p>
+                        <a href="trcn-exam.vercel.app" class="text-navy dark:text-gold text-sm font-semibold border-b border-gold pb-0.5">Visit Website
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="py-24 bg-navy dark:bg-navy-deep text-paper">
+        <div class="max-w-3xl mx-auto px-6 lg:px-10 text-center" data-aos="fade-up">
+            <i class="fa-solid fa-quote-left text-gold text-3xl mb-6"></i>
+            <p class="font-display text-2xl lg:text-3xl leading-snug">
+                Samuel consistently demonstrates professionalism and exceptional organizational skills.
             </p>
-            <div class="hero-brand">
-                <span class="brand-text">Nazarite Tech Services</span>
-            </div>
-            <a href="#projects" class="cta-button">View My Projects</a>
+            <p class="mt-6 text-gold tracking-wide text-sm uppercase font-mono">Former Supervisor</p>
+            <p class="mt-2 text-gold">★★★★★</p>
         </div>
     </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="images/project1-screenshot.jpg" alt="App 1 Screenshot" class="project-img">
-                <h3>TaskMaster Pro</h3>
-                <p>A productivity app for students to manage assignments and track progress. Designed for busy learners.</p>
-                <div class="tech-stack">
-                    <span>Node.js</span>
-                    <span>MongoDB</span>
-                    <span>React</span>
-                    <span>Tailwind CSS</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://taskmaster-pro.vercel.app" target="_blank">Live Demo</a>
-                    <a href="https://github.com/yourusername/taskmaster-pro" target="_blank">Source Code</a>
-                </div>
-            </div>
+    <!-- ============ CV CTA ============ -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center" data-aos="fade-up">
+            <h2 class="font-display text-3xl lg:text-4xl text-navy dark:text-paper font-medium mb-6">Want the full record on paper?</h2>
+            <a href="Onatunde Samuel CV updated1nw.docx" download class="hidden sm:inline-flex items-center gap-2 bg-navy dark:bg-gold text-paper dark:text-navy-ink text-sm font-semibold px-5 py-2.5 rounded-sm hover:bg-navy-deep dark:hover:bg-gold-light transition">
+                <i class="fa-solid fa-download"></i> Download Resume
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="images/project2-screenshot.jpg" alt="App 2 Screenshot" class="project-img">
-                <h3>QuizGenius</h3>
-                <p>An interactive quiz platform for computer studies tutors to create and share custom quizzes.</p>
-                <div class="tech-stack">
-                    <span>Firebase</span>
-                    <span>Next.js</span>
-                    <span>Prisma</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://quizgenius.firebaseapp.com" target="_blank">Live Demo</a>
-                    <a href="https://github.com/yourusername/quizgenius" target="_blank">Source Code</a>
-                </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="images/project3-screenshot.jpg" alt="App 3 Screenshot" class="project-img">
-                <h3>EduTrack</h3>
-                <p>A full-stack dashboard for tracking student performance in coding bootcamps.</p>
-                <div class="tech-stack">
-                    <span>Express.js</span>
-                    <span>PostgreSQL</span>
-                    <span>Vue.js</span>
-                    <span>Bootstrap</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://edutrack.render.com" target="_blank">Live Demo</a>
-                    <a href="https://github.com/yourusername/edutrack" target="_blank">Source Code</a>
-                </div>
-            </div>
+            </a>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Get in Touch</h2>
-        <p>Ready to collaborate? Email me at <a href="mailto:hello@nazarite.tech">hello@nazarite.tech</a> or connect on LinkedIn/GitHub.</p>
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="py-24 lg:py-32 bg-mist/50 dark:bg-navy-deep/30 border-t border-navy/10 dark:border-gold/10">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16">
+            <div data-aos="fade-up">
+                <p class="tab-marker text-gold-dim dark:text-gold uppercase mb-3">File 07 — Contact</p>
+                <h2 class="font-display text-4xl text-navy dark:text-paper font-medium mb-8">Let's work together.</h2>
+
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-10 grid place-items-center rounded-full bg-navy dark:bg-gold text-paper dark:text-navy-ink"><i
+                                class="fa-solid fa-phone text-sm"></i></span>
+                        <span class="text-navy/75 dark:text-paper/75">+234 7044002120</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-10 grid place-items-center rounded-full bg-navy dark:bg-gold text-paper dark:text-navy-ink"><i
+                                class="fa-solid fa-envelope text-sm"></i></span>
+                        <span class="text-navy/75 dark:text-paper/75">samuel.onatunde@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="w-10 h-10 grid place-items-center rounded-full bg-navy dark:bg-gold text-paper dark:text-navy-ink"><i
+                                class="fa-solid fa-location-dot text-sm"></i></span>
+                        <span class="text-navy/75 dark:text-paper/75">Lagos, Nigeria</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 mt-9">
+                    <a href="#" class="w-10 h-10 grid place-items-center rounded-full border border-navy/15 dark:border-gold/25 text-navy dark:text-paper hover:border-gold hover:text-gold transition"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="w-10 h-10 grid place-items-center rounded-full border border-navy/15 dark:border-gold/25 text-navy dark:text-paper hover:border-gold hover:text-gold transition"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="#" class="w-10 h-10 grid place-items-center rounded-full border border-navy/15 dark:border-gold/25 text-navy dark:text-paper hover:border-gold hover:text-gold transition"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <form data-aos="fade-up" data-aos-delay="100" id="contact-form" class="space-y-5">
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wide text-navy/50 dark:text-paper/50 mb-2">Name</label>
+                    <input type="text" required class="w-full bg-paper dark:bg-navy-ink border border-navy/15 dark:border-gold/20 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wide text-navy/50 dark:text-paper/50 mb-2">Email</label>
+                    <input type="email" required class="w-full bg-paper dark:bg-navy-ink border border-navy/15 dark:border-gold/20 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-mono uppercase tracking-wide text-navy/50 dark:text-paper/50 mb-2">Message</label>
+                    <textarea rows="4" required class="w-full bg-paper dark:bg-navy-ink border border-navy/15 dark:border-gold/20 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold transition"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-navy dark:bg-gold text-paper dark:text-navy-ink font-semibold py-3.5 rounded-sm hover:bg-navy-deep dark:hover:bg-gold-light transition">
+                    Send Message
+                </button>
+                <p id="form-status" class="text-sm text-gold-dim dark:text-gold hidden"></p>
+            </form>
+        </div>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 Nazarite Tech Services. Built with ❤️ for tech education.</p>
+    <!-- ============ FOOTER ============ -->
+    <footer class="bg-navy-ink text-paper/70 py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="font-display text-lg text-paper">Samuel Onatunde</p>
+                <p class="text-sm">Executive Assistant Portfolio</p>
+            </div>
+            <p class="text-sm">© 2026 Samuel Onatunde. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- ============ SCRIPTS ============ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 60
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        function applyTheme(dark) {
+            html.classList.toggle('dark', dark);
+            themeIcon.classList.toggle('fa-moon', !dark);
+            themeIcon.classList.toggle('fa-sun', dark);
+        }
+        const savedTheme = (typeof window !== 'undefined' && window.__theme) || null;
+        let isDark = savedTheme === 'dark';
+        applyTheme(isDark);
+
+        themeToggle.addEventListener('click', () => {
+            isDark = !isDark;
+            applyTheme(isDark);
+            window.__theme = isDark ? 'dark' : 'light';
+        });
+
+        // Mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+        // Counter animation
+        const counters = document.querySelectorAll('.stat-num');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.count, 10);
+                    const suffix = el.dataset.suffix || '';
+                    const duration = 1400;
+                    const start = performance.now();
+
+                    function tick(now) {
+                        const progress = Math.min((now - start) / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.round(eased * target) + suffix;
+                        if (progress < 1) requestAnimationFrame(tick);
+                    }
+                    requestAnimationFrame(tick);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+        counters.forEach(c => counterObserver.observe(c));
+
+        // Contact form (placeholder — wire to backend/Formspree as needed)
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            status.textContent = "Thanks — this form is a placeholder. Connect it to Formspree, EmailJS, or your Node.js backend to receive messages.";
+            status.classList.remove('hidden');
+            e.target.reset();
+        });
+
+        // Download CV (placeholder link)
+        document.getElementById('download-cv').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Add your CV file path here, e.g. href="/assets/Samuel-Onatunde-CV.pdf" download');
+        });
+    </script>
+
 </body>
+
 </html>
